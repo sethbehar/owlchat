@@ -1,0 +1,47 @@
+.main {
+    position: absolute;
+    top: 15px; /* Adjusted to use `top` for clarity */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure it centers exactly */
+    border: 1px solid black;
+    border-radius: 32px;
+    height: 8vh;
+    width: 70vw; /* Take up most of the viewport width */
+    display: flex; /* Use flexbox to layout child elements */
+    justify-content: space-around; /* Space around the items */
+    padding: 0 20px; /* Padding on the sides */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    align-items: center;
+    color: white;
+}
+
+
+
+.nav-element {
+    flex: 1; /* Each element takes equal space */
+    text-align: center; /* Center text horizontally */
+    align-self: center; /* Center text vertically */
+}
+
+.btn {
+    background-color: transparent;
+	color: #ee8456;
+    border: 1px solid #ee8456;
+	padding: .6rem;
+    border-radius: 20px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    transition-duration: 200ms;
+}
+
+.btn:hover {
+    scale: 1.05;
+}
+
+.owl {
+    width: 50px;
+    height: 50px;
+}
+
+

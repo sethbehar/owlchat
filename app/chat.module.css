@@ -1,0 +1,142 @@
+.main {
+    height: 70vh;
+    border: 1px solid black;
+    margin-top: 150px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 32px;
+    border: 1px solid #ee8456;
+
+    -webkit-box-shadow:0px 0px 112px 45px rgba(238,132,86,0.26);
+    -moz-box-shadow: 0px 0px 112px 45px rgba(238,132,86,0.26);
+    box-shadow: 0px 0px 112px 45px rgba(238,132,86,0.26);
+}
+
+.messages {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    overflow-y: scroll;
+}
+
+.messages::-webkit-scrollbar {
+    display: none;
+  }
+
+.message {
+    color: white;
+    background-color: transparent;
+    border: 1px solid #ee8456;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 40%;
+    width: 40%;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* .input {
+    width: 70%;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 20px;
+} */
+
+.send {
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: .6rem;
+    border-radius: 20px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    transition-duration: 200ms;
+}
+
+.send:hover {
+    scale: 1.1;
+}
+
+.input {
+    width: 70%;
+    background-color: transparent;
+    /* changed from white to transparent */
+    color: white;
+    /* changed from black to white */
+    padding: 15px 20px;
+    /* updated padding for consistency */
+    border: 1px solid #ee8456;
+    /* consistent border color */
+    border-radius: 5px;
+    /* reduced border-radius for a subtle effect */
+    outline: none;
+    font-size: 1em;
+}
+
+.send {
+    background-color: transparent;
+    color: #ee8456;
+    border: 1px solid #ee8456;
+    padding: 0.6rem;
+    border-radius: 20px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    transition-duration: 200ms;
+}
+
+.send:hover {
+    transform: scale(1.05);
+    /* Corrected property name from 'scale' to 'transform: scale()' */
+}
+
+.inputBox {
+    position: relative;
+    display: flex;
+    width: 50%;
+}
+
+.inputBox .span {
+    position: absolute;
+    left: 20px;
+    /* aligned with input padding */
+    top: 0;
+    /* adjusted for vertical center alignment */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* This centers the placeholder vertically */
+    pointer-events: none;
+    transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
+    color: #ee8456;
+    letter-spacing: 0.1em;
+    font-size: 1em;
+    /* consistent font size with input */
+}
+
+.inputBox .input:focus~.span,
+.inputBox .input:valid~.span {
+    font-size: .9em;
+    transform: translateX(0px) translateY(-35px);
+    /* adjusted for clear visibility */
+    padding: 0 5px;
+    border-radius: 2px;
+    letter-spacing: 0em;
+}
+
+.error {
+    color: white;
+}
